@@ -5,7 +5,5 @@
   "useTabs": false,
   "trailingComma": "all",
   "printWidth": 130,
-  "endOfLine": "auto",
-  "importOrder": ["^@core/(.*)$", "<THIRD_PARTY_MODULES>", "^@server/(.*)$", "^[./]", "^@ui/(.*)$"],
-  "plugins": ["@trivago/prettier-plugin-sort-imports"]
+  "endOfLine": "auto"
 }

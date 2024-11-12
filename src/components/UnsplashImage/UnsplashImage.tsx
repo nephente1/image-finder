@@ -22,7 +22,7 @@ export const UnsplashImage: React.FC<UnsplashImageProps> = ({ category }) => {
         Error: {error.message}, please try again <ButtonComponent name="Refresh data" onClick={handleReject} />
       </p>
     );
-  if (isLoading) return <Loader />;
+  if (isLoading) return <Loader data-testid="loader" />;
   if (!category || (category === 'other' && customOption === '')) return <p>Please select an image category...</p>;
 
   const handleAccept = () => {
@@ -39,7 +39,7 @@ export const UnsplashImage: React.FC<UnsplashImageProps> = ({ category }) => {
         Picture from <CapitalizedText>{imageCategory}</CapitalizedText> category
       </h3>
       <ImageThumbWrapper>
-        <ImageThumb key={image.id} src={image.urls.regular} alt={image.alt_description || category} />
+        <ImageThumb key={image?.id} src={image?.urls.regular} alt={image?.alt_description || category} />
       </ImageThumbWrapper>
       <CenterAlignedContainer>
         <ButtonComponent name="Accept" onClick={handleAccept} />

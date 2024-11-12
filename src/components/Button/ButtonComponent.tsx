@@ -12,6 +12,7 @@ export const Button = styled.button`
   gap: 4px;
   text-transform: capitalize;
   height: 34px;
+  align-items: center;
 
   &:hover {
     background: ${THEME.COLORS.PINK};
