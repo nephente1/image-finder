@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { THEME } from '../../shared/theme';
 
 export const Button = styled.button`
-  background: ${THEME.COLORS.TRANSPARENT_BLUE};
+  background: ${THEME.COLORS.PINK};
   color: ${THEME.COLORS.LIGHT_GREY};
-  border: 1px solid #5b5074;
+  border: 1px solid ${THEME.COLORS.PINK};
   padding: 6px 16px;
   cursor: pointer;
   border-radius: 4px;
@@ -15,7 +15,7 @@ export const Button = styled.button`
   align-items: center;
 
   &:hover {
-    background: ${THEME.COLORS.PINK};
+    background: ${THEME.COLORS.TRANSPARENT_BLUE};
   }
 `;
 

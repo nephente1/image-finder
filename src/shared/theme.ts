@@ -11,6 +11,10 @@ export const GlobalStyle = createGlobalStyle`
   p { 
     line-height: 1.75;
   }
+
+  label {
+    font-size: 0.9rem;
+  }
 `;
 
 export const THEME = {
@@ -18,7 +22,7 @@ export const THEME = {
     MAIN: '#896686',
     TRANSPARENT_BLUE: '#161226c7',
     LIGHT_GREY: '#f1f1f1',
-    TRANSPARENT_BLACK: '#0202025c',
-    PINK: '#954074c7',
+    TRANSPARENT_BLACK: '#0202027a',
+    PINK: '#a84481c7',
   },
 };

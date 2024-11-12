@@ -8,6 +8,12 @@ Created with React + TypeScript + Vite
 npm run dev
 ```
 
+#### Run tests
+
+```npm
+npm run test
+```
+
 #### Used libraries:
 
 - React, Typescript, React Query, React-Router, Styled-Components

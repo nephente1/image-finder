@@ -1,3 +1,4 @@
+import { FlexColumnContainer } from '../styles';
 import { SelectWrapper, Option } from './Select.styles';
 
 interface SelectProps {
@@ -14,13 +15,16 @@ export const Select = ({ options, value, onChange }: SelectProps) => {
   };
 
   return (
-    <SelectWrapper value={value} onChange={handleChange}>
-      <Option value="">Select an option</Option>
-      {options.map((option, index) => (
-        <Option key={index} value={option}>
-          {option}
-        </Option>
-      ))}
-    </SelectWrapper>
+    <FlexColumnContainer gap={5}>
+      <label htmlFor="select">Option select</label>
+      <SelectWrapper name="select" value={value} onChange={handleChange}>
+        <Option value="">Select an option</Option>
+        {options.map((option, index) => (
+          <Option key={index} value={option}>
+            {option}
+          </Option>
+        ))}
+      </SelectWrapper>
+    </FlexColumnContainer>
   );
 };

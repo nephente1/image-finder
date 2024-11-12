@@ -19,7 +19,7 @@ export const GenerateCard = () => {
       <ContainerTitle>Generate Card</ContainerTitle>
       <CenterJustifiedContainer>
         {cachedImage && name && surname ? (
-          <CardComponent category={selectedOption} name={name} surname={surname} imageSrc={cachedImage.urls.regular} />
+          <CardComponent category={imageCategory} name={name} surname={surname} imageSrc={cachedImage.urls.regular} />
         ) : (
           <h3>Please select an image category and fill your name and surname</h3>
         )}

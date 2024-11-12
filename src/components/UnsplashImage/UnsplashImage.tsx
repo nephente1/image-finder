@@ -35,11 +35,11 @@ export const UnsplashImage: React.FC<UnsplashImageProps> = ({ category }) => {
 
   return (
     <CenterJustifiedContainer>
-      <h3>
+      <h2>
         Picture from <CapitalizedText>{imageCategory}</CapitalizedText> category
-      </h3>
+      </h2>
       <ImageThumbWrapper>
-        <ImageThumb key={image?.id} src={image?.urls.regular} alt={image?.alt_description || category} />
+        <ImageThumb role="img" key={image?.id} src={image?.urls.regular} alt={image?.alt_description || category} />
       </ImageThumbWrapper>
       <CenterAlignedContainer>
         <ButtonComponent name="Accept" onClick={handleAccept} />

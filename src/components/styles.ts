@@ -8,10 +8,10 @@ export const AppLayout = styled.div`
   grid-template-rows: auto 1fr auto;
   background: #e5e5e5;
   font-size: 16px;
-  background: radial-gradient(#6e3030, #24275a);
+  background: radial-gradient(#8d4747, #24275a);
 `;
 
-export const Container = styled.div`
+export const Container = styled.main`
   width: 80%;
   margin: 0 auto;
   padding: 40px 0;
@@ -39,7 +39,7 @@ export const CenterAlignedContainer = styled.div`
   margin: 5px 0;
 `;
 
-export const CenterJustifiedContainer = styled.div`
+export const CenterJustifiedContainer = styled.section`
   display: flex;
   align-items: center;
   gap: 10px;
@@ -47,15 +47,16 @@ export const CenterJustifiedContainer = styled.div`
   flex-direction: column;
 `;
 
-export const FlexColumnContainer = styled.div`
+export const FlexColumnContainer = styled.section<{ gap?: number }>`
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: ${(props) => (props.gap ? props.gap + 'px' : '15px')};
 `;
 
-export const FlexGapContainer = styled.div`
+export const FlexGapContainer = styled.div<{ aligned?: string }>`
   display: flex;
   gap: 10px;
+  align-items: ${(props) => (props.aligned ? props.aligned : 'center')};
 `;
 
 export const Input = styled.input`
@@ -71,6 +72,7 @@ export const Input = styled.input`
   text-transform: capitalize;
   &:focus {
     outline: 0;
+    border: 1px solid ${THEME.COLORS.PINK};
   }
 `;
 

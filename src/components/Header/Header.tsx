@@ -6,8 +6,10 @@ export const Header = () => {
 
   return (
     <HeaderWrapper>
-      <span className="material-symbols-outlined">add_photo_alternate</span>
-      <Logo onClick={() => navigate('/')}>
+      <span role="img" className="material-symbols-outlined">
+        add_photo_alternate
+      </span>
+      <Logo role="button" onClick={() => navigate('/')}>
         <h1>Inspire Image</h1>
         <div>Create your own card</div>
       </Logo>

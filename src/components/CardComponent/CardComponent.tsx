@@ -11,7 +11,7 @@ export const CardComponent = ({ category, name, surname, imageSrc }: CardProps) 
   return (
     <Card>
       <ImageWrapper>
-        <Image src={imageSrc} alt={category} />
+        <Image role="img" src={imageSrc} alt={category} />
       </ImageWrapper>
       <Title data-testid="movie-title">
         {name} {surname}

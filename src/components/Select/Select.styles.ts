@@ -14,6 +14,7 @@ export const SelectWrapper = styled.select`
   text-transform: uppercase;
   &:focus {
     outline: 0;
+    border: 1px solid ${THEME.COLORS.PINK};
   }
 `;
 
@@ -21,8 +22,6 @@ export const Option = styled.option`
   color: ${THEME.COLORS.MAIN};
   background: ${THEME.COLORS.LIGHT_GREY};
   border: none;
-  border-radius: 0px;
-  border: 1px solid ${THEME.COLORS.TRANSPARENT_BLUE};
   text-transform: uppercase;
   &:first-of-type {
     text-transform: capitalize;

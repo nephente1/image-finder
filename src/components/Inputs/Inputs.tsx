@@ -16,16 +16,22 @@ export const Inputs = () => {
 
   return (
     <FlexColumnContainer>
-      <h3>
+      <h2>
         Fill your name and surname:{' '}
         <CapitalizedText>
           {' '}
           {userData.name} {userData.surname}
         </CapitalizedText>
-      </h3>
-      <FlexGapContainer>
-        <Input placeholder="type your name" ref={inputRefName} />
-        <Input placeholder="type your surname" ref={inputRefSurname} />
+      </h2>
+      <FlexGapContainer aligned="end">
+        <FlexColumnContainer gap={5}>
+          <label htmlFor="name">Name:</label>
+          <Input aria-label="name" name="name" placeholder="type your name" ref={inputRefName} />
+        </FlexColumnContainer>
+        <FlexColumnContainer gap={5}>
+          <label htmlFor="surname">Surname:</label>
+          <Input aria-label="surname" name="surname" placeholder="type your surname" ref={inputRefSurname} />
+        </FlexColumnContainer>
         <ButtonComponent name="set your data" onClick={sendData} />
       </FlexGapContainer>
     </FlexColumnContainer>
