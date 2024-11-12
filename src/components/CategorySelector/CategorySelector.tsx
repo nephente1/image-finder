@@ -24,7 +24,7 @@ export const CategorySelector = () => {
           <>
             <FlexColumnContainer gap={5}>
               <label htmlFor="category">Option select</label>
-              <Input aria-label="category" name="category" placeholder="type your category" ref={inputRefCategory} />
+              <Input aria-label="category" id="category" placeholder="type your category" ref={inputRefCategory} />
             </FlexColumnContainer>
             <ButtonComponent name="search" onClick={getData} />
           </>

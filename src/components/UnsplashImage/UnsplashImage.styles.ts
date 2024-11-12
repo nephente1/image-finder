@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const ImageThumbWrapper = styled.div`
-  width: 600px;
-  height: 600px;
+  height: 90vw;
+  width: 90vw;
+  max-width: 600px;
+  max-height: 600px;
 `;
 
 export const ImageThumb = styled.img`

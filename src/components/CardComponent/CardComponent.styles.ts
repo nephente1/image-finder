@@ -22,6 +22,11 @@ export const Card = styled.div`
     transform: scale(1.03);
     transition: 0.3s;
   }
+
+  @media (max-width: 650px) {
+    width: 360px;
+    height: 440px;
+  }
 `;
 
 export const Title = styled.div`
@@ -34,6 +39,10 @@ export const Title = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 650px) {
+    font-size: 22px;
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -41,10 +50,18 @@ export const ImageWrapper = styled.div`
   width: 100%;
   margin-bottom: 15px;
   border: 3px solid ${THEME.COLORS.MAIN};
+
+  @media (max-width: 650px) {
+    height: 330px;
+  }
 `;
 
 export const Image = styled.img`
   height: 455px;
   width: 100%;
   object-fit: cover;
+
+  @media (max-width: 650px) {
+    height: 325px;
+  }
 `;

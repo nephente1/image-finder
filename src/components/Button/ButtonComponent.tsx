@@ -13,6 +13,7 @@ export const Button = styled.button`
   text-transform: capitalize;
   height: 34px;
   align-items: center;
+  min-width: fit-content;
 
   &:hover {
     background: ${THEME.COLORS.TRANSPARENT_BLUE};

@@ -17,7 +17,7 @@ export const Select = ({ options, value, onChange }: SelectProps) => {
   return (
     <FlexColumnContainer gap={5}>
       <label htmlFor="select">Option select</label>
-      <SelectWrapper name="select" value={value} onChange={handleChange}>
+      <SelectWrapper id="select" value={value} onChange={handleChange}>
         <Option value="">Select an option</Option>
         {options.map((option, index) => (
           <Option key={index} value={option}>

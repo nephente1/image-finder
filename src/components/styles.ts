@@ -57,6 +57,11 @@ export const FlexGapContainer = styled.div<{ aligned?: string }>`
   display: flex;
   gap: 10px;
   align-items: ${(props) => (props.aligned ? props.aligned : 'center')};
+
+  @media (max-width: 650px) {
+    align-items: center;
+    flex-direction: column;
+  }
 `;
 
 export const Input = styled.input`

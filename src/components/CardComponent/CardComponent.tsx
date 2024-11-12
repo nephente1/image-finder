@@ -13,7 +13,7 @@ export const CardComponent = ({ category, name, surname, imageSrc }: CardProps) 
       <ImageWrapper>
         <Image role="img" src={imageSrc} alt={category} />
       </ImageWrapper>
-      <Title data-testid="movie-title">
+      <Title>
         {name} {surname}
       </Title>
     </Card>

@@ -26,11 +26,11 @@ export const Inputs = () => {
       <FlexGapContainer aligned="end">
         <FlexColumnContainer gap={5}>
           <label htmlFor="name">Name:</label>
-          <Input aria-label="name" name="name" placeholder="type your name" ref={inputRefName} />
+          <Input aria-label="name" id="name" placeholder="type your name" ref={inputRefName} />
         </FlexColumnContainer>
         <FlexColumnContainer gap={5}>
           <label htmlFor="surname">Surname:</label>
-          <Input aria-label="surname" name="surname" placeholder="type your surname" ref={inputRefSurname} />
+          <Input aria-label="surname" id="surname" placeholder="type your surname" ref={inputRefSurname} />
         </FlexColumnContainer>
         <ButtonComponent name="set your data" onClick={sendData} />
       </FlexGapContainer>
