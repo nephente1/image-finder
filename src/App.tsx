@@ -24,7 +24,7 @@ const App = () => {
 export default App;
 
 // This implements the default behavior from styled-components v5
-function shouldForwardProp(propName: string, target: any) {
+function shouldForwardProp(propName: string, target: unknown) {
   if (typeof target === 'string') {
     // For HTML elements, forward the prop if it is a valid HTML attribute
     return isPropValid(propName);

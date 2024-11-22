@@ -10,12 +10,9 @@ export const HeaderWrapper = styled.header`
   align-items: center;
   justify-content: center;
 
-  & span {
+  & div[role='img'] {
     margin: 4px 10px 0 0;
     font-size: 60px;
-  }
-  & h1 {
-    font-size: 28px;
   }
 `;
 
@@ -23,4 +20,11 @@ export const Logo = styled.div`
   display: flex;
   cursor: pointer;
   flex-direction: column;
+  font-size: 28px;
+  font-weight: bold;
+  & div {
+    &:not(:first-child) {
+      font-size: 18px;
+    }
+  }
 `;

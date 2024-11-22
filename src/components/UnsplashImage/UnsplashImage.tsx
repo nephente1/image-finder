@@ -19,7 +19,7 @@ export const UnsplashImage: React.FC<UnsplashImageProps> = ({ category }) => {
   if (error instanceof Error)
     return (
       <p>
-        Error: {error.message}, please try again <ButtonComponent name="Refresh data" onClick={handleReject} />
+        Error: {error.message}, please try again <ButtonComponent name="  Refresh data" onClick={handleReject} />
       </p>
     );
   if (isLoading) return <Loader data-testid="loader" />;

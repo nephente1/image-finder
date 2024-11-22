@@ -6,11 +6,11 @@ export const Header = () => {
 
   return (
     <HeaderWrapper>
-      <span role="img" className="material-symbols-outlined">
+      <div role="img" className="material-symbols-outlined">
         add_photo_alternate
-      </span>
+      </div>
       <Logo role="button" onClick={() => navigate('/')}>
-        <h1>Inspire Image</h1>
+        <div>Inspire Image</div>
         <div>Create your own card</div>
       </Logo>
     </HeaderWrapper>
