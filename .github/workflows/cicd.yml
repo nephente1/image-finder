@@ -10,7 +10,23 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build-and-deploy:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: eslint check
+      run: npm run lint || exit 1
+      continue-on-error: false
+  
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: vite tests
+      run: npm run test
+      continue-on-error: false
+  
+  build:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout source
@@ -25,15 +41,14 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
-    - name: eslint check
-      run: npm run lint
-
-    - name: Run tests
-      run: npm run test
-
     - name: Build Project
       run: npm run build
+      continue-on-error: false
 
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [build, lint, tests]
+    steps:
     - name: Deploy to Vercel
       env:
         VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
