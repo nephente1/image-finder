@@ -7,7 +7,7 @@ interface CardProps {
   imageSrc: string;
 }
 
-export const CardComponent = ({ category, name, surname, imageSrc }: CardProps  ) => {
+export const CardComponent = ({ category, name, surname, imageSrc }: CardProps) => {
   return (
     <Card>
       <ImageWrapper>
