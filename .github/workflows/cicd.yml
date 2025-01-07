@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: eslint check
-      run: npm run lint  --max-warnings 0 || exit 1
+      run: npm run lint  --max-warnings 0
   
   tests:
     runs-on: ubuntu-latest
