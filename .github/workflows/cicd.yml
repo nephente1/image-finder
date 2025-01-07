@@ -48,7 +48,7 @@ jobs:
       run: npm install
 
     - name: Check Vite version
-      run: npx vite --version  # Sprawdza, czy vite jest zainstalowane
+      run: npx vite --version  # check if vite is installed
 
     - name: Build Project
       run: npm run build
@@ -64,7 +64,7 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '22'  # Ensure the same version as the build job
-    - name: Install dependencies
+    - name: Install dependencies # it is important to install deps on every step
       run: npm install
     - name: Deploy to Vercel
       env:
