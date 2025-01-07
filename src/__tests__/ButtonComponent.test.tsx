@@ -7,7 +7,7 @@ describe('ButtonComponent', () => {
     render(<ButtonComponent name="Click Me" />);
 
     // Check if the button is rendered with the correct text
-    const button = screen.getByRole('button', { name: /dddclick me/i });
+    const button = screen.getByRole('button', { name: /click me/i });
     expect(button).toBeInTheDocument();
   });
 
