@@ -21,7 +21,7 @@ export const GenerateCard = () => {
         {cachedImage && name && surname ? (
           <CardComponent category={imageCategory} name={name} surname={surname} imageSrc={cachedImage.urls.regular} />
         ) : (
-          <h3>Please select an image category and fill your name and surname</h3>
+          <h3>Please select an image category and fill your name and surname *</h3>
         )}
         <ButtonComponent name="Back" onClick={() => navigate(-1)} />
       </CenterJustifiedContainer>
