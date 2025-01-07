@@ -47,6 +47,9 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
+    - name: Check Vite version
+      run: npx vite --version  # Sprawdza, czy vite jest zainstalowane
+
     - name: Build Project
       run: npm run build
       continue-on-error: false
