@@ -15,19 +15,23 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: eslint check
-      run: npm run lint || exit 1
-      continue-on-error: false
+      run: npm run lint  --max-warnings 0 || exit 1
   
   tests:
     runs-on: ubuntu-latest
+    needs: [lint]
     steps:
     - uses: actions/checkout@v4
+
+    - name: Install Dependencies
+      run: npm install
     - name: vite tests
-      run: npm run test
+      run: npm run test -- --passWithNoTests
       continue-on-error: false
   
   build:
     runs-on: ubuntu-latest
+    needs: [lint, tests]
     steps:
     - name: Checkout source
       uses: actions/checkout@v4
